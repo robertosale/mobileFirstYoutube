@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 1px solid white;
+}
+
+.search {
+  background-color: black;
+  grid-area: search;
+}
+
+.video {
+  background-color: aqua;
+  grid-area: video;
+}
+
+.video2 {
+  background-color: yellow;
+  grid-area: video2;
+}
+
+.user {
+  background-color: blue;
+  grid-area: user;
+}
+
+.navigation {
+  background-color: brown;
+  grid-area: navigation;
+}
+
+.logo {
+  background-color: red;
+  grid-area: logo;
+}
+
+.logo2 {
+  background-color: aqua;
+  grid-area: logo2;
+}
+.banner {
+  background-color: green;
+  grid-area: banner;
+}
+
+/*Esto es en grande*/
+@media only screen and (min-width: 577px) {
+  .container {
+    display: grid;
+    margin: 0px;
+    padding: 0;
+
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 56px 263px 456px 60px;
+
+    grid-template-areas:
+      "logo user logo2"
+      "navigation  banner banner"
+      "navigation video video"
+      "navigation . .";
+  }
+}
+
+/* Esto es en chico*/
+
+@media only screen and (max-width: 576px) {
+  .container {
+    display: grid;
+    margin: 0px;
+    padding: 0;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 56px 276px 276px 48px;
+
+    grid-template-areas:
+      "logo user"
+      "video video"
+      "video2 video2"
+      "navigation navigation";
+  }
+}
